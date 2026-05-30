@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan - ANAKINDO</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .inner-hero { padding: 120px 30px 40px; background: var(--bg-hero); text-align: center; }
+        .form-container { max-width: 600px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: 20px; box-shadow: var(--shadow-float); }
+        .form-group { margin-bottom: 25px; text-align: left; }
+        label { display: block; font-weight: 600; margin-bottom: 10px; color: var(--text-main); }
+        input, select, textarea { width: 100%; padding: 15px; border: 2px solid rgba(74, 172, 2, 0.15); border-radius: 10px; background: var(--bg-light); color: var(--text-main); font-size: 1rem; transition: all 0.3s; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--brand-green); background: var(--white); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="login.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; cursor: default;">
+                    <img src="assets/img/logo.png" alt="ANAKINDO Logo">
+                    <span class="logo-text">ANAKINDO</span>
+                </a>
+            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn" style="padding: 5px 15px; user-select: none;" onclick="var nav = document.getElementById('mainNav'); nav.classList.toggle('active'); this.innerHTML = nav.classList.contains('active') ? '✕' : '☰';">☰</div>
+            <nav id="mainNav">
+                <a href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="katalog.html">Katalog</a>
+                <a href="pesan.html">Pemesanan</a>
+                <a href="kontak.html" class="btn btn-primary" style="padding: 10px 25px; color: white;">Hubungi Kami</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="inner-hero">
+        <h1 style="font-size: 2.5rem; color: var(--text-main);">Mulai Proyek Anda</h1>
+    </div>
+
+    <section class="section-container" style="padding-top: 0;">
+        <div class="form-container">
+            <form id="formPesanLokal" onsubmit="prosesPesanan(event)">
+                <div class="form-group">
+                    <label>Nama Lengkap / Perwakilan Acara</label>
+                    <input type="text" name="nama" placeholder="Masukkan nama Anda..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Nomor WhatsApp / Telepon Aktif</label>
+                    <input type="tel" name="nomor" placeholder="Contoh: 081234567890" required>
+                </div>
+                <div class="form-group">
+                    <label>Pilih Layanan Lapangan</label>
+                    <select name="layanan" id="layananSelect" required>
+                        <option value="" disabled selected>-- Pilih Layanan yang Dibutuhkan --</option>
+                        <option value="1">Teknisi Panggilan</option>
+                        <option value="2">Katering & Prasmanan</option>
+                        <option value="3">Event Organizer (EO)</option>
+                    </select>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Tanggal Pelaksanaan</label>
+                        <input type="date" name="tanggal" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Waktu Kedatangan</label>
+                        <input type="time" name="waktu" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Alamat Lengkap & Patokan Lokasi</label>
+                    <textarea name="alamat" rows="2" placeholder="Contoh: Jl. Sudirman No. 10 (Pagar Hitam depan minimarket)" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Detail Kebutuhan / Keluhan</label>
+                    <textarea name="deskripsi" rows="3" placeholder="Ceritakan detailnya (Misal: AC netes air, Tema acara rustic, Alergi seafood...)"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px;">Kirim Formulir Pemesanan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="logo-wrapper">
+                    <img src="assets/img/logo.png" alt="ANAKINDO Logo">
+                    <span class="logo-text">ANAKINDO</span>
+                </div>
+                <p>ANAKINDO adalah penyedia layanan IT profesional dengan layanan custom, desain modern, aman, dan harga terjangkau untuk berbagai kebutuhan digitalisasi bisnis Anda.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Perusahaan</h4>
+                <ul>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                    <li><a href="portofolio.html">Portofolio</a></li>
+                    <li><a href="syarat.html">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="katalog.html">Event Organizer (EO)</a></li>
+                    <li><a href="katalog.html">Katering & Prasmanan</a></li>
+                    <li><a href="katalog.html">Teknisi Panggilan</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <p>WhatsApp : <strong style="color: var(--text-main); font-size: 1.05rem;">0812-8200-0025</strong></p>
+                <p>Jl. Danau Bratan Timur. III No.E-37, Madyopuro, Kec. Kedungkandang, Kota Jakarta, Indonesia 65139</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>&copy; Copyright 2026 <strong style="color: var(--text-main);">ANAKINDO</strong>. All rights reserved.</div>
+            <div>Support By <strong style="color: var(--text-main);">Internal Team</strong></div>
+        </div>
+    </footer>
+    
+    <script>
+        async function prosesPesanan(event) {
+            event.preventDefault(); 
+            
+            var form = document.getElementById('formPesanLokal');
+            var selectLayanan = document.getElementById('layananSelect');
+            var tombolSubmit = form.querySelector('button[type="submit"]');
+
+            // Ubah tombol jadi status loading
+            tombolSubmit.innerText = "Memproses Pesanan...";
+            tombolSubmit.disabled = true;
+            
+            var dataPesanan = {
+                id: 'TRX-' + Math.floor(1000 + Math.random() * 9000),
+                nama: form.nama.value,
+                nomor: form.nomor.value,
+                service_id: selectLayanan.value, 
+                tanggal: form.tanggal.value, 
+                waktu: form.waktu.value,     
+                alamat: form.alamat.value,   
+                deskripsi: form.deskripsi.value
+            };
+
+            try {
+                // PERHATIAN: Ubah 'nama_folder_anda' sesuai dengan nama folder di htdocs
+                const response = await fetch('http://localhost/anakindo/proses_pesanan.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dataPesanan)
+                });
+
+                const result = await response.json();
+
+                if (result.sukses) {
+                    alert("Luar biasa " + dataPesanan.nama + "! " + result.pesan);
+                    form.reset();
+                } else {
+                    alert("Gagal: " + result.pesan);
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert("Terjadi kesalahan koneksi. Pastikan XAMPP menyala dan URL folder benar.");
+            } finally {
+                tombolSubmit.innerText = "Kirim Formulir Pemesanan";
+                tombolSubmit.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

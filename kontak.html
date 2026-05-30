@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - ANAKINDO</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <style>
+        .inner-hero { padding: 120px 30px 40px; background: var(--bg-hero); text-align: center; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; }
+        .contact-info { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: var(--shadow-float); }
+        .info-item { margin-bottom: 25px; }
+        .info-item h4 { color: var(--brand-green); margin-bottom: 5px; }
+        
+        /* GAYA TOMBOL MEDIA SOSIAL VERTIKAL DENGAN LOGO RESMI SVG */
+        .social-links-container { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+        
+        .social-btn { 
+            text-decoration: none; 
+            color: var(--text-main); 
+            font-weight: 600; 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            background: rgba(74, 172, 2, 0.05); 
+            padding: 14px 22px; 
+            border-radius: 12px; 
+            transition: all 0.3s ease; 
+            font-size: 0.95rem; 
+            border: 1px solid rgba(74, 172, 2, 0.1); 
+        }
+        
+        /* Mengatur Ukuran dan Warna Ikon SVG Resmi */
+        .social-btn svg { 
+            width: 20px; 
+            height: 20px; 
+            fill: var(--brand-green); /* Warna default hijau sesuai tema ANAKINDO */
+            transition: all 0.3s ease; 
+        }
+        
+        /* Efek Hover Elegan: Background Hijau, Teks & SVG otomatis Putih */
+        .social-btn:hover { 
+            background: var(--fade-green); 
+            color: var(--white); 
+            border-color: transparent; 
+            transform: translateX(6px); 
+            box-shadow: var(--shadow-btn); 
+        }
+        
+        .social-btn:hover svg { 
+            fill: var(--white); /* Ubah ikon jadi putih saat disorot */
+            transform: scale(1.1); /* Sedikit membesar biar dinamis */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="login.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; cursor: default;">
+                    <img src="assets/img/logo.png" alt="ANAKINDO Logo">
+                    <span class="logo-text">ANAKINDO</span>
+                </a>
+            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn" style="padding: 5px 15px; user-select: none;" onclick="var nav = document.getElementById('mainNav'); nav.classList.toggle('active'); this.innerHTML = nav.classList.contains('active') ? '✕' : '☰';">☰</div>
+            <nav id="mainNav">
+                <a href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="katalog.html">Katalog</a>
+                <a href="pesan.html">Pemesanan</a>
+                <a href="https://wa.me/6281282000025?text=Halo%20Tim%20ANAKINDO,%20saya%20ingin%20konsultasi%20gratis%20mengenai%20kebutuhan%20jasa%20saya." class="btn btn-primary" target="_blank" style="padding: 10px 25px; color: white;">Hubungi Kami</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="inner-hero">
+        <h1 style="font-size: 2.5rem; color: var(--text-main);">Hubungi Tim Kami</h1>
+    </div>
+
+    <section class="section-container" style="padding-top: 0;">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3 style="margin-bottom: 25px; font-size: 1.5rem;">Informasi Operasional</h3>
+                <div class="info-item">
+                    <h4>Lokasi Kantor</h4>
+                    <p>Jakarta, Indonesia</p>
+                </div>
+                <div class="info-item">
+                    <h4>Email Address</h4>
+                    <p>hello@anakindo.com</p>
+                </div>
+                <div class="info-item">
+                    <h4>Jam Kerja</h4>
+                    <p>Senin - Jumat | 09:00 - 17:00 WIB</p>
+                </div>
+                
+                <div class="info-item">
+                    <h4>Media Sosial Resmi</h4>
+                    <div class="social-links-container">
+                        
+                        <a href="https://instagram.com/anakindo" target="_blank" class="social-btn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            Instagram
+                        </a>
+                        
+                        <a href="https://tiktok.com/@anakindo" target="_blank" class="social-btn">
+                            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.65 4.17 1.13 1.24 2.69 2.01 4.34 2.24v3.83c-1.42-.06-2.82-.55-4.01-1.34-.35-.23-.67-.5-.97-.79v6.54c.01 1.76-.41 3.52-1.26 5.03-.89 1.57-2.28 2.84-3.95 3.56-1.72.75-3.64.99-5.5.68-1.81-.31-3.51-1.25-4.81-2.58C.65 20.03-.04 18.17 0 16.22c-.03-2 .68-3.97 2.01-5.46 1.35-1.52 3.25-2.51 5.31-2.77.47-.06.94-.08 1.42-.06v3.91c-.81-.08-1.63.09-2.36.47-.78.41-1.42 1.07-1.8 1.88-.41.87-.51 1.87-.27 2.81.23.94.77 1.77 1.52 2.38.78.63 1.77.94 2.78.88 1.01-.05 1.97-.5 2.67-1.24.73-.78 1.12-1.82 1.1-2.89V0h1.33z"/></svg>
+                            TikTok
+                        </a>
+                        
+                        <a href="https://facebook.com/anakindo" target="_blank" class="social-btn">
+                            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            Facebook
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3 style="margin-bottom: 25px; font-size: 1.5rem;">Tinggalkan Pesan Cepat</h3>
+                <form id="kontakForm">
+                    <input type="text" name="nama" placeholder="Nama Anda" style="width:100%; padding:15px; border:2px solid rgba(74, 172, 2, 0.15); border-radius:10px; margin-bottom:20px;" required>
+                    <input type="tel" name="nomor" placeholder="Nomor WhatsApp Anda (Contoh: 0812...)" style="width:100%; padding:15px; border:2px solid rgba(74, 172, 2, 0.15); border-radius:10px; margin-bottom:20px;" required>
+                    <textarea name="pesan" rows="4" placeholder="Pesan Anda..." style="width:100%; padding:15px; border:2px solid rgba(74, 172, 2, 0.15); border-radius:10px; margin-bottom:20px;" required></textarea>
+                    <button type="submit" class="btn btn-secondary" style="width: 100%;">Kirim Pesan via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="logo-wrapper">
+                    <img src="assets/img/logo.png" alt="ANAKINDO Logo">
+                    <span class="logo-text">ANAKINDO</span>
+                </div>
+                <p>ANAKINDO adalah penyedia layanan terpadu yang berfokus pada jasa teknisi panggilan, katering berkualitas, dan manajemen acara (EO) profesional untuk mempermudah kegiatan Anda.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Perusahaan</h4>
+                <ul>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                    <li><a href="portofolio.html">Portofolio</a></li>
+                    <li><a href="syarat.html">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="katalog.html">Teknisi Panggilan</a></li>
+                    <li><a href="katalog.html">Katering & Prasmanan</a></li>
+                    <li><a href="katalog.html">Event Organizer (EO)</a></li>
+                    <li><a href="https://wa.me/6281282000025?text=Halo%20Tim%20ANAKINDO,%20saya%20ingin%20konsultasi%20gratis%20mengenai%20kebutuhan%20jasa%20saya." target="_blank">Konsultasi Khusus</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <p>WhatsApp : <strong style="color: var(--text-main); font-size: 1.05rem;">0812-8200-0025</strong></p>
+                <p>Jl. Danau Bratan Timur. III No.E-37, Madyopuro, Kec. Kedungkandang, Kota Jakarta, Indonesia 65139</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>&copy; Copyright 2026 <strong style="color: var(--text-main);">ANAKINDO</strong>. All rights reserved.</div>
+            <div>Support By <strong style="color: var(--text-main);">Internal Team</strong></div>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/6281282000025" class="floating-chat" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Live Chat
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const kontakForm = document.getElementById('kontakForm');
+            
+            if (kontakForm) {
+                kontakForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); 
+                    
+                    try {
+                        const formData = new FormData(kontakForm);
+                        const namaKlien = formData.get('nama');
+                        const nomorKlien = formData.get('nomor');
+                        const pesanKlien = formData.get('pesan');
+                        
+                        // Format pesan untuk WhatsApp
+                        const teksSapaan = `Halo Tim ANAKINDO, saya *${namaKlien}*.\nNomor Kontak: ${nomorKlien}\n\nSaya ingin menyampaikan pesan:\n_"${pesanKlien}"_\n\nMohon informasi lebih lanjut. Terima kasih.`;
+                        
+                        const pesanURL = encodeURIComponent(teksSapaan);
+                        const nomorWAAdmin = "6281282000025";
+                        
+                        // Eksekusi buka WhatsApp
+                        window.open(`https://wa.me/${nomorWAAdmin}?text=${pesanURL}`, '_blank');
+                        
+                        // Kosongkan form
+                        kontakForm.reset();
+                        
+                    } catch (error) {
+                        console.error("Terjadi error pada form kontak:", error);
+                        alert("Maaf, sistem sedang memproses. Silakan klik tombol Live Chat di pojok bawah.");
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
